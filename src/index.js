@@ -1,12 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import Head from "./Head";
+import Items from "./Items";
+import Subcribe from "./Subscribe";
+import Footer from "./Footer";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+class Shop extends React.Component {
+  render() {
+    return (
+      <div>
+        <Head />
+        <Items />
+        <Subcribe />
+        <Footer />
+      </div>
+    );
+  }
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<Shop />, document.getElementById("root"));
